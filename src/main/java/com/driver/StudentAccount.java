@@ -3,7 +3,7 @@ package com.driver;
 public class StudentAccount extends BankAccount{
 
     String  institutionName;
-    public String getInstitutionName(){
+    public String getInstitutionName()throws Exception{
         return this.institutionName;
     }
     public  StudentAccount(String name, double balance, String  institutionName) throws Exception{

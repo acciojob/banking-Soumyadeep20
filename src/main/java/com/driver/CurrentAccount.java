@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class CurrentAccount extends BankAccount{
     String tradeLicenseId; //consists of Uppercase English characters only
-    public String getTradeLicenseId(){
+    public String getTradeLicenseId() throws Exception{
         return this.tradeLicenseId;
     }
     public CurrentAccount(String name, double balance, String tradeLicenseId) throws Exception {

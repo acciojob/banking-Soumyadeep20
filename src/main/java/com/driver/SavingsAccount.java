@@ -26,7 +26,7 @@ public class SavingsAccount extends BankAccount{
 
     }
 
-    public double getSimpleInterest(int years){
+    public double getSimpleInterest(int years) throws Exception{
         double ans=this.getBalance()+((this.getBalance()*rate)*years);
         return ans;
         // Return the final amount considering that bank gives simple interest on current amount
@@ -34,7 +34,7 @@ public class SavingsAccount extends BankAccount{
     }
 
 
-    public double getCompoundInterest(int times, int years){
+    public double getCompoundInterest(int times, int years)throws Exception{
         // Return the final amount considering that bank gives compound interest on current amount given times per year
         double currAmount = super.getBalance();
         for (int i = 0; i < years; i++) {

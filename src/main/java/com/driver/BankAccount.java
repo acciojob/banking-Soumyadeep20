@@ -20,15 +20,15 @@ public class BankAccount {
     public BankAccount() {
 
     }
-    public double getBalance()
+    public double getBalance() throws Exception
     {
         return this.balance;
     }
-    public void setBalance(double x)
+    public void setBalance(double x)throws Exception
     {
         this.balance=x;
     }
-    public double getMinBalance()
+    public double getMinBalance()throws Exception
     {
         return this.minBalance;
     }
@@ -69,10 +69,10 @@ public class BankAccount {
         //Generate account number having given number of 'digits' such that the sum of digits is equal to 'sum'
         //If it is not possible, throw "Account Number can not be generated" exception
 
-      
+
     }
 
-    public void deposit(double amount) {
+    public void deposit(double amount) throws Exception {
         this.balance +=amount;
         //add amount to balance
 

@@ -36,11 +36,40 @@ public class BankAccount {
 
     public String generateAccountNumber(int digits, int sum) throws Exception{
 
+    int arr[]=new int[10];
+    for(int i=9;i>=1;i--)
+    {
+        int x=sum/i;
+        sum =sum%i;
+    }
+    String str="";
+        for(int i=9;i>=0;i--)
+        {
+            for(int j=0;j<arr[i];j++)
+            {
+                str += i;
+            }
+        }
+        if(str.length()>digits)
+        {
+            throw  new Exception("Account Number can not be generated");
+        }
+        if(str.length()<digits)
+        {
+            int x= digits-str.length();
+            for(int i=0;i<x;i++)
+            {
+                str+="0";
+            }
+        }
+        return str;
+
+
         //Each digit of an account number can lie between 0 and 9 (both inclusive)
         //Generate account number having given number of 'digits' such that the sum of digits is equal to 'sum'
         //If it is not possible, throw "Account Number can not be generated" exception
 
-        return null;
+      
     }
 
     public void deposit(double amount) {

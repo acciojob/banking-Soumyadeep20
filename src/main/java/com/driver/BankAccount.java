@@ -28,10 +28,11 @@ public class BankAccount {
     {
         this.balance=x;
     }
-    public double getminBalance()
+    public double getMinBalance()
     {
         return this.minBalance;
     }
+    public String getName(){return  this.name;}
 
     public String generateAccountNumber(int digits, int sum) throws Exception{
 

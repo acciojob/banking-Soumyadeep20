@@ -12,7 +12,7 @@ public class SavingsAccount extends BankAccount{
 
     }
     public void withdraw(double amount) throws Exception {
-        if((this.getBalance()-amount)<this.getminBalance())
+        if((this.getBalance()-amount)<this.getMinBalance())
             throw new Exception("Insufficient Balance");
         this.setBalance(this.getBalance()-amount);
         // Might throw the following errors:

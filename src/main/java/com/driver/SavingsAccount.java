@@ -3,6 +3,11 @@ package com.driver;
 public class SavingsAccount extends BankAccount{
     double rate;
     double maxWithdrawalLimit;
+    public double getRate(){return this.rate;}
+
+    public double getMaxWithdrawalLimit() {
+        return this.maxWithdrawalLimit;
+    }
 
     public SavingsAccount(String name, double balance, double maxWithdrawalLimit, double rate) throws Exception {
         super(name,balance,0);
